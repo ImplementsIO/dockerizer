@@ -1,0 +1,66 @@
+{% extends "layout/base.html" %}
+
+{% block body %}
+<div class="app-page container">
+  <h3>{{ template.templateName }}</h3>  
+  <div class="auth">        
+    <div class="btn-group btn-group-block float-right" style="max-width: 200px;">
+      {% if isLogin %} 
+      <a href="/templates/new" class="btn btn-primary btn-sm">Submit</a>
+      <a href="/auth/logout" class="btn btn-sm">Logout</a>
+      {% else %}
+      <a href="#" class="btn btn-sm">Submit ?</a>
+      <a href="/passport/github" class="btn btn-primary btn-sm tooltip tooltip-left" data-tooltip="Login with Github">Login</a>
+      {% endif %}
+    </div>    
+    <div class="clearfix"></div>
+  </div>
+  <div class="divider"></div>
+  <div class="columns">
+    {% if contributor %}
+    <div class="column col-3">
+      <div class="chip">
+        <img src="{{ contributor.avatar }}" alt="..." class="avatar avatar-sm">
+        <span>{{ contributor.displayName }}</span>
+        &nbsp;-&nbsp;
+        <a href="/contributors/{{ contributor._id }}">{{ contributor.username }}</a>
+      </div>
+    </div>
+    <div class="column col-9 text-right">
+      <span>{{ helper.formatDateTime(template.createdAt) }}</span>
+    </div>
+    {% endif %}
+    <div class="column col-12" id="template-raw" style="margin-top: 1rem;">
+      <pre class="code" data-lang="{{ template.templateType }}" id="template-raw-code">
+          <code>{{ template.templateRaw }}</code>
+      </pre>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block header %} 
+<link rel="stylesheet" href="https://unpkg.com/codemirror@5.35.0/lib/codemirror.css">
+<link rel="stylesheet" href="https://unpkg.com/codemirror@5.35.0/theme/mbo.css">
+{% endblock %}
+
+{% block script %}
+<script src="https://unpkg.com/codemirror@5.35.0/lib/codemirror.js"></script>
+<script src="https://unpkg.com/codemirror@5.35.0/mode/javascript/javascript.js"></script>
+<script>  
+  window.onload = function() {    
+    if(typeof CodeMirror === 'function'){
+      var templateRaw = document.getElementById('template-raw');
+      var templateRawCode = document.getElementById('template-raw-code');
+      var CodeMirrorEditor = CodeMirror(templateRaw, {
+        mode: "text/javascript",
+        value: templateRaw.innerText,
+        lineNumbers: true,
+        lineWrapping: true,
+        theme: 'mbo'
+      });
+      templateRawCode.style.display = 'none';
+    }
+  };
+</script>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ title}}</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="/public/css/global.css">
+  {% block header %} {% endblock %}
+</head>
+
+<body>
+  <div class="off-canvas off-canvas-sidebar-show">
+    <!-- off-screen toggle button -->
+    <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar">
+      <i class="icon icon-menu"></i>
+    </a>
+
+    <div id="sidebar" class="sidebar off-canvas-sidebar">
+      <!-- off-screen sidebar -->
+      <div class="app-brand">
+        <a href="/" class="app-brand-logo">
+          <p class="app-brand-title">Dockerize Tools</p>
+        </a>
+      </div>
+      <div class="app-nav">
+        {% include "./components/nav.html" %}
+      </div>
+    </div>
+
+    <a class="off-canvas-overlay" href="#close"></a>
+
+    <div class="content off-canvas-content">
+      <!-- off-screen content -->
+      {% block body %} {% endblock %}
+    </div>
+  </div>
+
+  {% block script %} {% endblock %}
+</body>
+
+</html>

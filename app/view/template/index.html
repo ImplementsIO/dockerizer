@@ -1,0 +1,56 @@
+{% extends "../layout/base.html" %}
+{% block body %}
+<div class="app-page container">
+  <h3 class="title">Templates</h3>  
+  <div class="divider"></div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created At</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for template in data %}
+      <tr>
+        <td>{{ template.templateName }}</td>
+        <td>{{ helper.formatDateTime(template.createdAt) }}</td>
+        <td>
+          <a href="/templates/{{ template._id }}" class="btn btn-sm">Template</a>
+        </td>
+      </tr>
+      {% endfor %}
+      {% if data.length === 0 %}
+      <tr>
+        <td colspan="3">Not Found</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+  {% if meta.pages > 1%}
+  <ul class="pagination">
+    {% if meta.page > 1%}
+    <li class="page-item page-prev">
+      <a href="/templates?page={{ meta.page - 1 }}">
+        <div class="page-item-title">
+          <i class="icon icon-arrow-left"></i>
+          <span>Previous</span>
+        </div>
+      </a>
+    </li>
+    {% endif %}
+    {% if meta.page < meta.pages %} 
+    <li class="page-item page-next">
+      <a href="/templates?page={{ meta.page + 1}}">
+        <div class="page-item-title">
+          <span>Next</span>
+          <i class="icon icon-arrow-right"></i>
+        </div>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}

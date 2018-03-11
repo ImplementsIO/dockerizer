@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+}
+
+.sidebar {}
+
+.content.off-canvas-content {
+    padding: 0 1rem;
+}
+
+
+/* fix */
+
+.pagination .page-item span {
+    vertical-align: middle;
+}
+
+.CodeMirror {
+    min-height: 400px;
+}
+
+
+/* app */
+
+.app-brand {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.app-brand-logo,
+.app-brand-logo:active,
+.app-brand-logo:hover,
+.app-brand-logo:focus {
+    text-decoration: none;
+}
+
+.app-brand-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.app-nav {
+    padding: 0 .5em;
+}
+
+.app-nav-menu li {
+    color: #5b657a;
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.app-page.container {
+    padding-top: 2.4rem;
+}
+
+
+/* home */
+
+.search {
+    padding: 7rem 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.search-desc {
+    text-align: right;
+    font-size: .6rem;
+    padding-top: .2rem;
+    font-style: italic;
+    opacity: 0.4;
+    width: 100%;
+}
+
+.docker-template-submit-form {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}

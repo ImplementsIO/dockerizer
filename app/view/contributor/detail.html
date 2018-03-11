@@ -1,0 +1,27 @@
+{% extends "../layout/base.html" %}
+{% block body %}
+<div class="app-page container">
+  <h3 class="title">Contributor</h3>
+  <div class="divider"></div>
+  <div class="tile" style="margin-top: 1rem;">
+    <div class="tile-icon">
+      <figure class="avatar avatar-lg">
+        <img src="{{ detail.avatar_url }}" alt="Avatar">
+      </figure>
+    </div>
+    <div class="tile-content">
+      <p class="tile-title">{{ detail.name }}&nbsp;@{{ detail.login }}</p>
+      <p class="tile-subtitle text-gray">        
+        {{ detail.location }}
+        <br>        
+        {{ detail.bio }},
+        {{ detail.company }}        
+      </p>
+    </div>
+    <div class="tile-action">
+        <a href="{{ detail.blog }}" class="btn btn-sm">Blog</a>        
+      <a href="{{ detail.html_url }}" class="btn btn-primary btn-sm">Github</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
