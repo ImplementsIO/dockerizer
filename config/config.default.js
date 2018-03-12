@@ -22,7 +22,7 @@ module.exports = appInfo => {
 
   // database
   config.mongoose = {
-    url: process.env.EGG_MONGOOSE_URL || 'mongodb://egg_dockerize:egg_dockerize@127.0.0.1:27017/egg_dockerize',
+    url: process.env.EGG_MONGOOSE_URL || 'mongodb://egg_dockerizer:egg_dockerizer@127.0.0.1:27017/egg_dockerizer',
     options: {},
   };
 
