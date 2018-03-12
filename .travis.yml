@@ -9,6 +9,6 @@ script:
 after_script:
   - npminstall codecov && codecov
 before_script:
-  - mongo egg_dockerize --eval 'db.createUser({user:"egg_dockerize",pwd:"egg_dockerize",roles:["readWrite"]});'
+  - mongo egg_dockerizer --eval 'db.createUser({user:"egg_dockerizer",pwd:"egg_dockerizer",roles:["readWrite"]});'
 services:
   - mongodb
