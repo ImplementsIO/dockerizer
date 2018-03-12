@@ -1,4 +1,4 @@
-# Dockerizer
+# Dockerizer &middot;  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ImplementsIO/dockerizer/blob/master/LICENSE)
 
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -13,6 +13,10 @@
 [david-url]: https://david-dm.org/ImplementsIO/dockerizer
 [snyk-image]: https://snyk.io/test/github/ImplementsIO/dockerizer/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/github/ImplementsIO/dockerizer
+
+---
+
+[![CircleCI](https://circleci.com/gh/ImplementsIO/dockerizer.svg?style=svg)](https://circleci.com/gh/ImplementsIO/dockerizer)
 
 ## QuickStart
 
