@@ -1,19 +1,19 @@
-{% extends "../layout/base.html" %}
+{% extends "../layout/base.html" %} 
 {% block body %}
 <div class="app-page container">
   <h3 class="title">Contributors</h3>
   <div class="divider"></div>
   <div class="columns">
-    <div class="column col-3">
-      {% for contributor in contributors %}
-      <div class="chip">
+    {% for contributor in contributors %}
+    <div class="column col-2">
+      <div class="chip" style="margin-top: 0.5rem;">
         <img src="{{ contributor.avatar }}" alt="..." class="avatar avatar-sm">
         <span>{{ contributor.displayName }}</span>
         &nbsp;-&nbsp;
         <a href="/contributors/{{ contributor._id }}">{{ contributor.username }}</a>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
