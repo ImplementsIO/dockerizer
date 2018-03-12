@@ -1,4 +1,4 @@
-# dockerize-egg
+# Dockerizer
 
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -13,8 +13,6 @@
 [david-url]: https://david-dm.org/ImplementsIO/dockerizer
 [snyk-image]: https://snyk.io/test/github/ImplementsIO/dockerizer/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/github/ImplementsIO/dockerizer
-
-Dockerizer
 
 ## QuickStart
 
