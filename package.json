@@ -1,5 +1,5 @@
 {
-  "name": "dockerize-egg",
+  "name": "dockerizer-egg",
   "version": "1.0.0",
   "description": "dockerize tools",
   "private": true,
