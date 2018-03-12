@@ -14,8 +14,6 @@
 [snyk-image]: https://snyk.io/test/github/ImplementsIO/dockerizer/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/github/ImplementsIO/dockerizer
 
-[![Build Status](https://www.travis-ci.org/ImplementsIO/dockerizer.svg?branch=master)](https://www.travis-ci.org/ImplementsIO/dockerizer)
-
 Dockerizer
 
 ## QuickStart
