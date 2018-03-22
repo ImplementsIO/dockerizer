@@ -8,7 +8,7 @@
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://github.com/ImplementsIO/dockerizer/blob/master/LICENSE
-[egg-url]: https://egg.js
+[egg-url]: https://eggjs.org/
 [egg-square]: https://img.shields.io/badge/Power%20By%20Egg.js-2.5.0-ff69b4.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/ImplementsIO/dockerizer.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ImplementsIO/dockerizer
