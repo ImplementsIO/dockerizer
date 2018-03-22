@@ -1,10 +1,15 @@
-# Dockerizer &middot;  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ImplementsIO/dockerizer/blob/master/LICENSE)
+# Dockerizer &middot;  [![GitHub license][license-image]][license-url] 
 
+[![powered by egg][egg-square]][egg-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://github.com/ImplementsIO/dockerizer/blob/master/LICENSE
+[egg-url]: https://egg.js
+[egg-square]: https://img.shields.io/badge/Power%20By%20Egg.js-2.5.0-ff69b4.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/ImplementsIO/dockerizer.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ImplementsIO/dockerizer
 [codecov-image]: https://img.shields.io/codecov/c/github/ImplementsIO/dockerizer.svg?style=flat-square
