@@ -32,6 +32,7 @@ module.exports = appInfo => {
   config.passportGithub = {
     key: process.env.EGG_PASSPORT_GITHUB_CLIENT_ID || 'test',
     secret: process.env.EGG_PASSPORT_GITHUB_CLIENT_SECRET || 'test',
+    callbackURL: process.env.EGG_PASSPORT_GITHUB_CALLBACK_URL || '/passport/github/callback',
   };
 
   return config;
