@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -14,8 +16,8 @@ module.exports = appInfo => {
       '.html': 'nunjucks',
     },
   };
-  
-  config.proxy = process.env.EGG_PROXY || false;
+
+  config.proxy = process.env.EGG_PROXY === 'proxy';
 
   // middleware
   config.middleware = [
@@ -33,6 +35,7 @@ module.exports = appInfo => {
     key: process.env.EGG_PASSPORT_GITHUB_CLIENT_ID || 'test',
     secret: process.env.EGG_PASSPORT_GITHUB_CLIENT_SECRET || 'test',
     callbackURL: process.env.EGG_PASSPORT_GITHUB_CALLBACK_URL || '/passport/github/callback',
+    proxy: process.env.EGG_PROXY === 'proxy',
   };
 
   return config;
