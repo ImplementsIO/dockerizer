@@ -14,6 +14,8 @@ module.exports = appInfo => {
       '.html': 'nunjucks',
     },
   };
+  
+  config.proxy = process.env.EGG_PROXY || false;
 
   // middleware
   config.middleware = [
