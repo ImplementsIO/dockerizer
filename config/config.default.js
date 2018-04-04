@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config();
+// require('dotenv').config();
 
 module.exports = appInfo => {
   const config = exports = {};
